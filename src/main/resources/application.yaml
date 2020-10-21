@@ -20,10 +20,10 @@ spring:
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
-      properties:
-        interceptor.classes: io.confluent.monitoring.clients.interceptor.MonitoringProducerInterceptor
-    template:
-      default-topic:
+#?      properties:
+#?        interceptor.classes: io.confluent.monitoring.clients.interceptor.MonitoringProducerInterceptor
+#    template:
+#      default-topic:
 #logging:
 #  level:
 #    root: info
