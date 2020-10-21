@@ -11,13 +11,9 @@ import io.confluent.developer.User;
 @RestController
 @RequestMapping(value = "/user")
 public class KafkaController {
-
-  private final Producer producer;
-
   @Autowired
-  KafkaController(Producer producer) {
-    this.producer = producer;
-  }
+  private Producer producer;
+
 
   @PostMapping(value = "/publish")
   public void sendMessageToKafkaTopic(@RequestParam("name") String name, @RequestParam("age") Integer age) {
